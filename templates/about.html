@@ -1,0 +1,96 @@
+{% extends 'base.html' %} {% block content %}
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+
+    <style>
+      body {
+        margin: 0;
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      #bg {
+        background-image: url('{% static "css/images/about.svg" %}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .about {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+      }
+
+      .about-paragraph {
+        text-align: right;
+        position: absolute;
+        right: 20px;
+        top: 100px;
+        max-width: 50%;
+      }
+
+      .github-icon {
+        margin-left: 20px;
+        height: 50px;
+      }
+
+      .github-icon img {
+        width: 40px;
+        height: 40px;
+        padding-right: -50px;
+        padding-top: 300px;
+      }
+
+      .about h1 {
+        color: #004080;
+        font-size: 2rem;
+      }
+
+      .about p {
+        font-size: 1rem;
+        color: #ffffff;
+        line-height: 1.8;
+      }
+    </style>
+  </head>
+  <body id="bg">
+    <section>
+      <div class="about">
+        <div class="about-paragraph">
+          <h1>About me</h1>
+          <p>
+            Hi, I'm Mark Andrew Pagayon, a multi-talented designer and developer
+            driven <br />by creativity and innovation. With expertise in
+            Creative Design, UI/UX, Marketing, <br />Python Development, and
+            Animation, I bring ideas to life through visually stunning <br />
+            and user-friendly experiences.
+          </p>
+        </div>
+
+        <div class="github-icon">
+          <a
+            href="https://github.com/Mark-Pagayon/portfolio.git"
+            target="_blank"
+          >
+            <img src="{% static 'css/images/github.png' %}" alt="GitHub" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+{% endblock content %}

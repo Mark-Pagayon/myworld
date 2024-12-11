@@ -1,0 +1,65 @@
+{% extends 'base.html' %} {% block content %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #070b1d;
+        color: #ffffff;
+        font-style: normal;
+        text-align: center;
+        padding-top: 300px;
+      }
+
+      .contact-button {
+        margin-top: 20px;
+      }
+
+      .contact-button .btn {
+        background-color: #004080;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .contact-button .btn:hover {
+        background-color: #003366;
+      }
+
+      h1 {
+        color: #ffffff;
+      }
+
+      p {
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: larger;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="contact">
+        <div class="email">
+          <p>2021100361bp@psu.palawan.edu.ph</p>
+        </div>
+        <div class="contact-button">
+          <a href="mailto:2021100361bp@psu.palawan.edu.ph" class="btn"
+            >Contact Me</a
+          >
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+{% endblock content %}

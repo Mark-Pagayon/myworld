@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetcs</title>
+    <link rel="stylesheet" href="{% static 'css/projects.css' %}">
+    <style>
+      body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #070B1D;
+      color: #333;
+      font-style: normal;
+    }
+      h1 {
+        color: #ffffff;
+        font-style: normal;
+        text-align: center;
+        padding-top: 100px;
+      }
+    </style>
+</head>
+<body>
+<section>
+  <div class="projects">
+<h1>My Projects</h1>
+    
+    </div>
+  </div>
+</section>
+</body>
+</html>
+{% endblock content %}

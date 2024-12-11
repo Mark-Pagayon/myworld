@@ -1,0 +1,115 @@
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #ffffff;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 10px;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+      display: block;
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #ffd700;
+      color: #004080;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background-color: #ff9800;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+      margin: 10px 5px;
+    }
+
+    .btn:hover {
+      background-color: #e67e22;
+      transform: scale(1.05);
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #004080;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="{% static 'css/images/logo2.svg' %}" alt="Your Logo" id="logo" />
+  </div>
+  <nav>
+    <ul>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'projects' %}">Projects</a></li>
+      <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+{% block content %} {% endblock content %}
